@@ -45,14 +45,14 @@ export default function HeroSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6">
-          <Link href="https://fund.amana-regenesis.com">
+          <Link href="/fund">
             <Button className="amana-btn-primary text-sm md:text-base px-6 py-3 md:px-8 md:py-4 group">
               Invest with Us
               <ChevronRight className="ml-2 h-4 w-4 md:h-5 md:w-5 transition-transform group-hover:translate-x-1" />
             </Button>
           </Link>
 
-          <Link href="https://developers.amana-regenesis.com" className="mt-3 sm:mt-0">
+          <Link href="/developers" className="mt-3 sm:mt-0">
             <Button className="amana-btn-secondary text-sm md:text-base px-6 py-3 md:px-8 md:py-4">
               Discover Projects
             </Button>

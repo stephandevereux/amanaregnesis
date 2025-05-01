@@ -89,7 +89,7 @@ export default function ContactUs() {
               </p>
               <p className="text-gray-700">
                 <strong>Investor Relations:</strong><br />
-                <a href="tel:+12025555678" className="text-amana-green hover:underline">+1 202 555 5678</a>
+                <a href="tel:+12025555678" className="text-amana-green hover:underline">+91 836 942 6568</a>
               </p>
             </div>
 

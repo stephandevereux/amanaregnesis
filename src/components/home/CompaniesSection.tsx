@@ -129,7 +129,7 @@ export default function CompaniesSection() {
               "Regular Zakat calculation and distribution support"
             ]}
             buttonText="Explore Investment Opportunities"
-            buttonLink="https://fund.amana-regenesis.com"
+            buttonLink="/fund"
             bgColor="bg-amana-green"
             titleColor="text-white"
           />
@@ -145,7 +145,7 @@ export default function CompaniesSection() {
               "Community-focused developments that enhance quality of life"
             ]}
             buttonText="See Our Projects"
-            buttonLink="https://developers.amana-regenesis.com"
+            buttonLink="/developers"
             bgColor="bg-amana-teal"
             titleColor="text-amana-gold"
             isRight

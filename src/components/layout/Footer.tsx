@@ -12,30 +12,14 @@ const mainLinks = [
   { title: "Contact Us", href: "/contact-us" },
 ];
 
-const fundLinks = [
-  { title: "Fund Overview", href: "https://fund.amana-regenesis.com" },
-  { title: "Investment Strategies", href: "https://fund.amana-regenesis.com/investment-strategies" },
-  { title: "Investor Portal", href: "https://fund.amana-regenesis.com/investor-portal" },
-  { title: "Performance", href: "https://fund.amana-regenesis.com/performance" },
-  { title: "Contact Investors", href: "https://fund.amana-regenesis.com/contact-investors" },
-];
-
-const developerLinks = [
-  { title: "Our Projects", href: "https://developers.amana-regenesis.com" },
-  { title: "Project Details", href: "https://developers.amana-regenesis.com/project-details" },
-  { title: "Sales Process", href: "https://developers.amana-regenesis.com/sales-process" },
-  { title: "Gallery", href: "https://developers.amana-regenesis.com/gallery" },
-  { title: "Contact Buyers", href: "https://developers.amana-regenesis.com/contact-buyers" },
-];
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-amana-charcoal text-white pt-12 lg:pt-16 pb-8">
       <div className="amana-container">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
-          {/* Company Info */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          {/* Company Info (Left) */}
           <div className="space-y-4">
             <div>
               <h4 className="font-playfair text-xl md:text-2xl font-bold text-white">
@@ -93,12 +77,12 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Main Links */}
+          {/* Main Website (Middle) */}
           <div>
             <h4 className="font-playfair text-lg md:text-xl text-amana-gold mb-4 md:mb-6">Main Website</h4>
             <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
               {mainLinks.map((link) => (
-                <li key={link.href}>
+                <li key={link.title}>
                   <Link
                     href={link.href}
                     className="text-gray-300 hover:text-white transition-colors duration-300 inline-block py-1"
@@ -110,37 +94,26 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Fund Links */}
+          {/* Our Services (Right) */}
           <div>
-            <h4 className="font-playfair text-lg md:text-xl text-amana-gold mb-4 md:mb-6">Fund</h4>
+            <h4 className="font-playfair text-lg md:text-xl text-amana-gold mb-4 md:mb-6">Our Services</h4>
             <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
-              {fundLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-300 inline-block py-1"
-                  >
-                    {link.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Developer Links */}
-          <div>
-            <h4 className="font-playfair text-lg md:text-xl text-amana-gold mb-4 md:mb-6">Developers</h4>
-            <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
-              {developerLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-300 inline-block py-1"
-                  >
-                    {link.title}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link
+                  href="/fund"
+                  className="text-amana-gold hover:text-white transition-colors duration-300 inline-block py-1"
+                >
+                  Fund
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/developers"
+                  className="text-amana-gold hover:text-white transition-colors duration-300 inline-block py-1"
+                >
+                  Developers
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
