@@ -85,8 +85,8 @@ export default function ContactSection() {
                   <div>
                     <h3 className="font-playfair text-lg text-amana-charcoal mb-1">Call Us</h3>
                     <p className="text-gray-600">
-                      <Link href="tel:+912255551234" className="hover:text-amana-green">
-                        +91-22-XXXX-XXXX
+                      <Link href="tel:+918369426568" className="hover:text-amana-green">
+                        +91 8369 426 568
                       </Link>
                     </p>
                   </div>
@@ -100,7 +100,7 @@ export default function ContactSection() {
                     <h3 className="font-playfair text-lg text-amana-charcoal mb-1">Email Us</h3>
                     <p className="text-gray-600">
                       <Link href="mailto:info@amana-regenesis.com" className="hover:text-amana-green">
-                        info@amana-regenesis.com
+                        theamanaregenesis@gmail.com
                       </Link>
                     </p>
                   </div>

@@ -7,38 +7,40 @@ import { Button } from "@/components/ui/button";
 import { useInView } from "react-intersection-observer";
 import { ArrowRight } from "lucide-react";
 
-// Sample blog post data
+
+// Blog post data (aligned with news-insights/[slug]/page.tsx)
 const blogPosts = [
   {
     id: 1,
-    title: "Why Navi Mumbai is India's Next Real Estate Hub",
-    excerpt: "With a new airport and metro lines, Navi Mumbai offers 15% CAGR potential. Learn why it's perfect for ethical investors.",
+    title: "Why Navi Mumbai is India’s Next Real Estate Hotspot: A Smart Investor’s Guide",
+    excerpt: "With a new airport, metro lines, and Sharia-compliant opportunities, Navi Mumbai offers 15% CAGR potential.",
     date: "March 15, 2025",
     category: "Market Analysis",
-    imageUrl: "https://same-assets.com/images/navi-mumbai-skyline",
-    slug: "navi-mumbai-real-estate-boom",
+    imageUrl: "/Navi-Mumbai-Skyline.jpg",
+    slug: "navi-mumbai-real-estate-hotspot",
   },
   {
     id: 2,
-    title: "How Blockchain Enhances Trust in Real Estate",
-    excerpt: "Discover how our blockchain technology ensures transparency in profit distribution and makes property transactions more secure.",
+    title: "How Blockchain is Revolutionizing Trust in Real Estate: A Complete Guide",
+    excerpt: "Blockchain brings transparency and security to real estate, ensuring Sharia-compliant investing with Amana Regenesis.",
     date: "February 28, 2025",
     category: "Technology",
-    imageUrl: "https://same-assets.com/images/blockchain-concept",
+    imageUrl: "/simple-art.jpg",
     slug: "blockchain-real-estate-trust",
   },
   {
     id: 3,
-    title: "Understanding Musharakah in Real Estate Investment",
-    excerpt: "An in-depth guide to profit and loss sharing structures in Islamic real estate financing and how they benefit investors.",
+    title: "Understanding Musharakah: The Ethical Way to Invest in Real Estate",
+    excerpt: "Musharakah offers a fair, Sharia-compliant model for real estate investing with shared risks and rewards.",
     date: "February 10, 2025",
     category: "Islamic Finance",
-    imageUrl: "https://same-assets.com/images/islamic-finance-concept",
+    imageUrl: "/hands.jpg",
     slug: "understanding-musharakah-investment",
   },
 ];
 
-// Press releases
+// Commented out press releases (not needed in idea phase)
+/*
 const pressReleases = [
   {
     id: 1,
@@ -55,6 +57,7 @@ const pressReleases = [
     slug: "fund-sebi-registration",
   },
 ];
+*/
 
 interface BlogCardProps {
   post: typeof blogPosts[0];
@@ -77,15 +80,13 @@ const BlogCard = ({ post, index }: BlogCardProps) => {
     >
       <div className="relative h-48 overflow-hidden">
         <div className="absolute inset-0 bg-amana-charcoal/20 hover:bg-amana-charcoal/10 transition-colors z-10"></div>
-        <div className="w-full h-full bg-amana-soft-grey"></div>
-        {/* In a real implementation, use actual images */}
-        {/* <Image
+        <Image
           src={post.imageUrl}
           alt={post.title}
           fill
           style={{ objectFit: "cover" }}
-        /> */}
-
+          priority={index === 0} // Prioritize first blog
+        />
         <div className="absolute top-4 left-4 z-20">
           <span className="bg-amana-green text-white text-xs px-3 py-1 rounded font-montserrat font-medium">
             {post.category}
@@ -98,9 +99,7 @@ const BlogCard = ({ post, index }: BlogCardProps) => {
         <h3 className="font-playfair text-xl text-amana-charcoal mb-3 leading-tight">
           {post.title}
         </h3>
-        <p className="text-gray-600 mb-4 line-clamp-2">
-          {post.excerpt}
-        </p>
+        <p className="text-gray-600 mb-4 line-clamp-2">{post.excerpt}</p>
         <Link
           href={`/news-insights/${post.slug}`}
           className="inline-flex items-center text-amana-green hover:text-amana-teal"
@@ -151,26 +150,7 @@ export default function NewsSection() {
           ))}
         </div>
 
-        {/* Press Releases Section */}
-        <div className="bg-white rounded-lg shadow-md p-6 md:p-8">
-          <h3 className="font-playfair text-2xl text-amana-charcoal mb-6">Press Releases</h3>
-          <div className="space-y-6">
-            {pressReleases.map((release) => (
-              <div key={release.id} className="border-b border-gray-100 pb-6 last:border-0 last:pb-0">
-                <p className="text-sm text-gray-500 mb-1 font-montserrat">{release.date}</p>
-                <h4 className="font-playfair text-lg text-amana-charcoal mb-2">{release.title}</h4>
-                <p className="text-gray-600 mb-3">{release.snippet}</p>
-                <Link
-                  href={`/news-insights/press/${release.slug}`}
-                  className="inline-flex items-center text-amana-green hover:text-amana-teal text-sm"
-                >
-                  Read Full Release
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
+       
       </div>
     </section>
   );

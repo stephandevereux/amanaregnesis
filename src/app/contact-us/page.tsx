@@ -85,11 +85,11 @@ export default function ContactUs() {
               <h3 className="font-playfair text-xl text-amana-charcoal mb-3">Call Us</h3>
               <p className="text-gray-700 mb-2">
                 <strong>Customer Support:</strong><br />
-                <a href="tel:+12025551234" className="text-amana-green hover:underline">+1 202 555 1234</a>
+                <a href="tel:+919082388584" className="text-amana-green hover:underline">+91 908 238 8584</a>
               </p>
               <p className="text-gray-700">
                 <strong>Investor Relations:</strong><br />
-                <a href="tel:+12025555678" className="text-amana-green hover:underline">+91 836 942 6568</a>
+                <a href="tel:+918369426568" className="text-amana-green hover:underline">+91 836 942 6568</a>
               </p>
             </div>
 
@@ -100,7 +100,7 @@ export default function ContactUs() {
               <h3 className="font-playfair text-xl text-amana-charcoal mb-3">Email Us</h3>
               <p className="text-gray-700 mb-2">
                 <strong>General Inquiries:</strong><br />
-                <a href="mailto:info@amana-regenesis.com" className="text-amana-green hover:underline">info@amana-regenesis.com</a>
+                <a href="mailto:info@amana-regenesis.com" className="text-amana-green hover:underline">theamanaregenesis@gmail.com</a>
               </p>
               <p className="text-gray-700">
                 <strong>Investor Relations:</strong><br />
@@ -326,26 +326,26 @@ export default function ContactUs() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <a
-              href="https://fund.amana-regenesis.com/investor-portal"
+              href="/fund"
               className="block bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-all hover:-translate-y-1"
             >
               <div className="w-16 h-16 bg-amana-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-amana-green" />
               </div>
-              <h3 className="font-playfair text-xl text-amana-charcoal mb-2">Investor Portal</h3>
+              <h3 className="font-playfair text-xl text-amana-charcoal mb-2">Funds</h3>
               <p className="text-gray-600">
                 Access your investment dashboard, view returns, and manage your portfolio.
               </p>
             </a>
 
             <a
-              href="https://developers.amana-regenesis.com/gallery"
+              href="/developers"
               className="block bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-all hover:-translate-y-1"
             >
               <div className="w-16 h-16 bg-amana-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Building className="w-8 h-8 text-amana-green" />
               </div>
-              <h3 className="font-playfair text-xl text-amana-charcoal mb-2">Property Gallery</h3>
+              <h3 className="font-playfair text-xl text-amana-charcoal mb-2">Developers</h3>
               <p className="text-gray-600">
                 Explore our developments, virtual tours, and available properties.
               </p>
