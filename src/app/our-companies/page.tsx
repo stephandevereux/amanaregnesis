@@ -60,7 +60,7 @@ export default function OurCompanies() {
                   seeking ethical returns through real estate investments across high-growth markets.
                 </p>
 
-                <Link href="https://fund.amana-regenesis.com">
+                <Link href="/fund">
                   <Button className="bg-white hover:bg-amana-gold text-amana-charcoal hover:text-amana-charcoal transition-colors group">
                     Visit Fund Website
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -91,7 +91,7 @@ export default function OurCompanies() {
                   ethical principles and Sharia-compliant financing options for end-users.
                 </p>
 
-                <Link href="https://developers.amana-regenesis.com">
+                <Link href="/developers">
                   <Button className="bg-white hover:bg-amana-gold text-amana-charcoal hover:text-amana-charcoal transition-colors group">
                     Visit Developers Website
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -149,7 +149,7 @@ export default function OurCompanies() {
               </ul>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="https://fund.amana-regenesis.com">
+                <Link href="/fund">
                   <Button className="amana-btn-primary">
                     Explore Investment Opportunities
                   </Button>
@@ -271,7 +271,7 @@ export default function OurCompanies() {
               </ul>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="https://developers.amana-regenesis.com">
+                <Link href="/developers">
                   <Button className="amana-btn-primary">
                     Browse Available Properties
                   </Button>
@@ -301,13 +301,13 @@ export default function OurCompanies() {
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="https://fund.amana-regenesis.com">
+              <Link href="/fund">
                 <Button className="amana-btn-secondary bg-transparent border-amana-gold text-white hover:text-amana-charcoal px-8 py-6">
                   Invest with Fund
                 </Button>
               </Link>
 
-              <Link href="https://developers.amana-regenesis.com">
+              <Link href="/developers">
                 <Button className="amana-btn-secondary bg-transparent border-amana-gold text-white hover:text-amana-charcoal px-8 py-6">
                   Explore Properties
                 </Button>
