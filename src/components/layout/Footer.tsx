@@ -9,7 +9,25 @@ const mainLinks = [
   { title: "Our Companies", href: "/our-companies" },
   { title: "Sharia Commitment", href: "/sharia-commitment" },
   { title: "News & Insights", href: "/news-insights" },
+  { title: "FAQs", href: "/faq" }, 
   { title: "Contact Us", href: "/contact-us" },
+];
+
+const websiteLinks = [
+  { title: "Funds", href: "/fund" },
+  { title: "Developers", href: "/developers" },
+];
+
+const contactInfo = [
+  { type: "email", value: "theamanaregenesis@gmail.com", href: "mailto:theamanaregenesis@gmail.com" },
+  { type: "phone", value: "+91 836 942 6568", href: "tel:+918369426568" },
+  { type: "address", value: "Navi Mumbai, Maharashtra, India" },
+];
+
+const legalLinks = [
+  { title: "Privacy Policy", href: "/privacy-policy" },
+  { title: "Terms of Service", href: "/terms-of-service" },
+  { title: "Disclaimer", href: "/disclaimer" },
 ];
 
 export default function Footer() {
@@ -18,8 +36,8 @@ export default function Footer() {
   return (
     <footer className="bg-amana-charcoal text-white pt-12 lg:pt-16 pb-8">
       <div className="amana-container">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-          {/* Company Info (Left) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+          {/* Company Info (Leftmost) */}
           <div className="space-y-4">
             <div>
               <h4 className="font-playfair text-xl md:text-2xl font-bold text-white">
@@ -35,6 +53,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-transform hover:scale-110 flex-center h-10 w-10 rounded-full bg-white/10 hover:bg-white/20"
+                aria-label="LinkedIn"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -58,6 +77,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-transform hover:scale-110 flex-center h-10 w-10 rounded-full bg-white/10 hover:bg-white/20"
+                aria-label="Twitter"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -77,9 +97,9 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Main Website (Middle) */}
+          {/* Quick Links (Second Column) */}
           <div>
-            <h4 className="font-playfair text-lg md:text-xl text-amana-gold mb-4 md:mb-6">Main Website</h4>
+            <h4 className="font-playfair text-lg md:text-xl text-amana-gold mb-4 md:mb-6">Quick Links</h4>
             <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
               {mainLinks.map((link) => (
                 <li key={link.title}>
@@ -94,49 +114,68 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Our Services (Right) */}
+          {/* Our Websites (Third Column) */}
           <div>
-            <h4 className="font-playfair text-lg md:text-xl text-amana-gold mb-4 md:mb-6">Our Services</h4>
+            <h4 className="font-playfair text-lg md:text-xl text-amana-gold mb-4 md:mb-6">Our Websites</h4>
             <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
-              <li>
-                <Link
-                  href="/fund"
-                  className="text-amana-gold hover:text-white transition-colors duration-300 inline-block py-1"
-                >
-                  Fund
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/developers"
-                  className="text-amana-gold hover:text-white transition-colors duration-300 inline-block py-1"
-                >
-                  Developers
-                </Link>
-              </li>
+              {websiteLinks.map((link) => (
+                <li key={link.title}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-300 inline-block py-1"
+                  >
+                    {link.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact (Rightmost Column) */}
+          <div>
+            <h4 className="font-playfair text-lg md:text-xl text-amana-gold mb-4 md:mb-6">Contact Us</h4>
+            <ul className="space-y-3 text-sm md:text-base">
+              {contactInfo.map((item, index) => (
+                <li key={index} className="flex items-start">
+                  {item.type === "email" || item.type === "phone" ? (
+                    <Link
+                      href={item.href!}
+                      className="text-gray-300 hover:text-amana-gold transition-colors flex items-start"
+                    >
+                      <span className="mr-2 text-amana-gold">
+                        {item.type === "email" ? "✉" : item.type === "phone" ? "📞" : "📍"}
+                      </span>
+                      {item.value}
+                    </Link>
+                  ) : (
+                    <div className="text-gray-300 flex items-start">
+                      <span className="mr-2 text-amana-gold">📍</span>
+                      {item.value}
+                    </div>
+                  )}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
         <Separator className="my-6 md:my-8 bg-amana-gold/20" />
 
-        {/* Contact and Copyright */}
+        {/* Copyright and Legal Links */}
         <div className="flex flex-col md:flex-row items-center justify-between text-gray-300 text-xs md:text-sm">
           <div className="mb-4 md:mb-0 text-center md:text-left">
             <p>© {currentYear} Amana Regenesis. All rights reserved.</p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 items-center">
-            <Link href="mailto:info@amana-regenesis.com" className="hover:text-amana-gold transition-colors whitespace-nowrap">
-              info@amana-regenesis.com
-            </Link>
-            <span className="hidden sm:inline text-gray-500">|</span>
-            <Link href="tel:+12025551234" className="hover:text-amana-gold transition-colors whitespace-nowrap">
-              +1 202 555 1234
-            </Link>
-            <span className="hidden sm:inline text-gray-500">|</span>
-            <Link href="/privacy-policy" className="hover:text-amana-gold transition-colors whitespace-nowrap">
-              Privacy Policy
-            </Link>
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
+            {legalLinks.map((link) => (
+              <Link 
+                key={link.title}
+                href={link.href}
+                className="hover:text-amana-gold transition-colors whitespace-nowrap"
+              >
+                {link.title}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

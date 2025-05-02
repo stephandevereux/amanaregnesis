@@ -13,6 +13,7 @@ const mainNavLinks = [
   { href: "/our-companies", label: "Our Companies" },
   { href: "/sharia-commitment", label: "Sharia Commitment" },
   { href: "/news-insights", label: "News & Insights" },
+  { href: "/faq", label: "FAQs" },
   { href: "/contact-us", label: "Contact Us" },
 ];
 
